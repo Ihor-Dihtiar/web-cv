@@ -12,11 +12,19 @@ const images = require('./webpack/images');
 const fonts = require('./webpack/fonts');
 const babel = require('./webpack/babel');
 // const favicon = require('./webpack/favicon');
+const CleanWebpackPlugin = require('./webpack/cleanWebpackPlugin');
+
+
+const fs = require('fs');
 
 const PATHS = {
   source: path.join(__dirname, 'source'),
   build: path.join(__dirname, 'build'),
 };
+
+const PAGES_DIR = `${PATHS.source}/pages/`;
+const PAGES = fs.readdirSync(PAGES_DIR).filter((fileName) => fileName.endsWith('.pug'));
+
 const common = merge([
   {
     entry: {
@@ -24,14 +32,24 @@ const common = merge([
     },
     output: {
       path: PATHS.build,
-      filename: path.join('.', 'scripts', '[name].js'),
+      filename: path.join('.', 'scripts', '[name].[contenthash].js'),
     },
     plugins: [
-      new HtmlWebpackPlugin({
-        filename: 'index.html',
-        // chunks: ['index', 'common'],
-        template: path.join(PATHS.source, 'pages', 'index.pug'),
-      }),
+      // new HtmlWebpackPlugin({
+      //   filename: 'index.html',
+      //   // chunks: ['index', 'common'],
+      //   template: path.join(PATHS.source, 'pages', 'index.pug'),
+      // }),
+
+      ...PAGES.map(
+        (page) =>
+          new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/${page}`,
+            filename: `./${page.replace(/\.pug/, '.html')}`,
+          })
+      ),
+
+      
 
       
     ],
@@ -53,6 +71,7 @@ const common = merge([
   images(),
   fonts(),
   babel(),
+  CleanWebpackPlugin(),
 ]);
 
 module.exports = function (env, argv) {

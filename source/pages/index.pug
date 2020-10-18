@@ -1,7 +1,42 @@
 extends ./components/_base-template
 
 block main
-    main
-        h1 It is test-page-number-3
+    //------------header-------------
+    header.header
+        .container
+            .header__inner
 
-        img(src="../img/its-me.jpg", alt="It's me")
+                //------------menu burger badge-------------
+                .header__menu-burger
+                    span
+
+                //------------sidebar-------------
+                .header__sidebar
+                    .sidebar__img-bg
+                        .sidebar__name Ihor Dihtiar
+                        .sidebar__specialty Web Developer
+                    nav.header__menu-nav
+                        ul
+                            li
+                                a(href="#") Home
+                            li
+                                a(href="#") About me
+                            li
+                                a(href="#") Education
+                            li
+                                a(href="#") Work Experience
+                            li
+                                a(href="#") Skills
+                            li
+                                a(href="#") Contacts
+                
+                //------------title-------------
+                .header__main
+                    h1.header__title Ihor Dihtiar
+                    .header__subtitle
+                        span Web Developer
+                        span Systems Engineer
+                    a.header__hire(href="") Hire Me!
+
+    main
+        

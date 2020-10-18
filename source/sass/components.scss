@@ -1,0 +1,31 @@
+// ------------base styles-------------
+
+html {
+  scroll-behavior: smooth;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: 'Raleway', sans-serif, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: $black;
+}
+
+a,
+button,
+input {
+  font-family: 'Raleway', sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+//--------------------------------MEDIA QUERIES--------------------------------------------------------------------------------------------
+
+// @media (max-width: 1279px) {
+//   .container {
+//     padding: 0 30px;
+//   }
+// }

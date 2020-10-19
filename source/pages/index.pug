@@ -1,42 +1,81 @@
 extends ./components/_base-template
 
 block main
-    //------------header-------------
-    header.header
-        .container
-            .header__inner
 
-                //------------menu burger badge-------------
-                .header__menu-burger
+    .page-wrapper
+
+        //------------header-------------
+        header.header.shift
+            .container
+                .header-inner
+
+                    .header-background
+                        img(src="../img/bg-img.png", alt="")
+
+                    
+                    
+                    //------------title-------------
+                    .header-main
+                        h1.header-title Ihor Dihtiar
+                        .header-subtitle
+                            span #Web Developer
+                            span #Systems Engineer
+                        a.header-hire(href="") Hire Me!
+
+        //------------section about me-------------
+        section.about.shift
+            .container
+                .about-inner
+                    .about-left-block
+                        .info-wrapper
+                            h2.info-title About me
+                            .info-text Lorem ipsum dolor sit amet, ectetuer nonummy nibh euismod tincidunt ut laoreet  magna  laoreet  aliquam erat volutpat.
+                            .info-block
+                                .info-block-item
+                                    span.key Name : 
+                                    span.value Ihor
+                                .info-block-item
+                                    span.key Age : 
+                                    span.value 31 Years
+                                .info-block-item
+                                    span.key Email : 
+                                    span.value ihordihtiar@gmail.com
+                                .info-block-item
+                                    span.key GitHub : 
+                                    span.value github.com/Ihor-Dihtiar
+                                .info-block-item
+                                    span.key Adress : 
+                                    span.value Ukraine, Melitopol
+                    .about-right-block
+                        .foto
+                            img(src="../img/its-me.png", alt="")
+
+    //------------menu elements-------------
+    .menu-wrapper
+        .container
+            //------------menu burger button-------------
+            button.btn-burger
+                .burger-icon
                     span
 
-                //------------sidebar-------------
-                .header__sidebar
-                    .sidebar__img-bg
-                        .sidebar__name Ihor Dihtiar
-                        .sidebar__specialty Web Developer
-                    nav.header__menu-nav
-                        ul
-                            li
-                                a(href="#") Home
-                            li
-                                a(href="#") About me
-                            li
-                                a(href="#") Education
-                            li
-                                a(href="#") Work Experience
-                            li
-                                a(href="#") Skills
-                            li
-                                a(href="#") Contacts
-                
-                //------------title-------------
-                .header__main
-                    h1.header__title Ihor Dihtiar
-                    .header__subtitle
-                        span Web Developer
-                        span Systems Engineer
-                    a.header__hire(href="") Hire Me!
-
-    main
-        
+            //------------side menu-------------
+            .side-menu
+                .menu-top
+                    .menu-top-img
+                        img(src="../img/its-me.png", alt="It's me")
+                    .menu-top-name Ihor Dihtiar
+                    .menu-top-specialty Web Developer
+                nav.menu-nav
+                    ul
+                        li
+                            a(href="#") Home
+                        li
+                            a(href="#") About me
+                        li
+                            a(href="#") Education
+                        li
+                            a(href="#") Work Experience
+                        li
+                            a(href="#") Skills
+                        li
+                            a(href="#") Contacts

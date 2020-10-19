@@ -1,1 +1,140 @@
+.page-wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 // ------------header-------------
+
+.header {
+  & .container {
+    padding: 0;
+  }
+  &-inner {
+    height: 586px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+  }
+  &-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-main {
+    position: relative;
+  }
+  &-title {
+    width: 327px;
+    height: 74px;
+    font-size: 48px;
+    line-height: 74px;
+    text-align: center;
+    color: $white;
+    border-top: 2px solid $red;
+    border-bottom: 2px solid $red;
+  }
+  &-subtitle {
+    margin: 5px 0 0 0;
+    font-size: 18px;
+    line-height: 2;
+    text-align: center;
+    color: $white;
+    & span {
+      padding: 0 8px;
+    }
+    & span:first-child {
+      border-right: 2px solid $white;
+    }
+  }
+  &-hire {
+    display: block;
+    width: 170px;
+    height: 50px;
+    color: $white;
+    background-color: $red;
+    text-align: center;
+    font-size: 22px;
+    line-height: 50px;
+    border-radius: 5px;
+    margin: 34px auto 0;
+  }
+}
+
+//------------section about me-------------
+
+.about {
+  &-inner {
+    padding-top: 74px;
+    display: flex;
+  }
+  &-left-block {
+    flex-basis: 50%;
+    & .info {
+      &-wrapper {
+        max-width: 400px;
+        width: 100%;
+        padding-top: 100px;
+      }
+      &-title {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 1.13;
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          width: 76px;
+          height: 2px;
+          background-color: $red;
+          bottom: -15px;
+          left: 0;
+        }
+      }
+      &-text {
+        margin-top: 50px;
+        font-size: 16px;
+        line-height: 1.6;
+        opacity: 0.8;
+      }
+      &-block {
+        margin-top: 20px;
+        max-width: 340px;
+        width: 100%;
+        background-color: $light-bg;
+        &-item {
+          line-height: 50px;
+          padding-left: 10px;
+          font-size: 18px;
+          border-bottom: 1px solid $white;
+          & .key {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  &-right-block {
+    flex-basis: 50%;
+    & .foto {
+      max-width: 380px;
+      width: 100%;
+      height: 100%;
+      margin-left: 20px;
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

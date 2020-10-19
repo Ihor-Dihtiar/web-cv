@@ -27,12 +27,15 @@ span {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 button {
   border: none;
   outline: none;
   background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 img {
@@ -42,4 +45,15 @@ img {
 ol,
 ul {
   list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
 }

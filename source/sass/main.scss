@@ -74,6 +74,10 @@
 .about {
   &-inner {
     padding-top: 74px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid $border-bottom;
     display: flex;
   }
   &-left-block {
@@ -84,21 +88,7 @@
         width: 100%;
         padding-top: 100px;
       }
-      &-title {
-        font-size: 32px;
-        font-weight: 600;
-        line-height: 1.13;
-        position: relative;
-        &::after {
-          content: '';
-          position: absolute;
-          width: 76px;
-          height: 2px;
-          background-color: $red;
-          bottom: -15px;
-          left: 0;
-        }
-      }
+      @include title;
       &-text {
         margin-top: 50px;
         font-size: 16px;
@@ -136,5 +126,143 @@
         object-fit: cover;
       }
     }
+  }
+}
+
+//------------section work experience-------------
+
+.experience {
+  &__inner {
+    padding-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid $border-bottom;
+  }
+  @include title;
+  &__body {
+    margin-top: 50px;
+    display: flex;
+  }
+}
+
+.body {
+  &__tree {
+    order: 2;
+    flex-grow: 0;
+    flex-shrink: 0;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__item {
+    flex-grow: 1;
+    &_left {
+      padding-right: 70px;
+      order: 1;
+      & .body__note {
+        margin-left: auto;
+        &_creative {
+          margin-top: 96px;
+          &::after {
+            content: '';
+            position: absolute;
+            background-color: $background-dark;
+            top: 90px;
+            left: 99.5%;
+            width: 35px;
+            height: 30px;
+            clip-path: polygon(0 0, 5px 5px, 35px 25px, 3px 27px, 0 30px);
+          }
+        }
+        &_manager {
+          margin-top: 190px;
+          &::after {
+            content: '';
+            position: absolute;
+            background-color: $background-dark;
+            top: 90px;
+            left: 99.5%;
+            width: 35px;
+            height: 30px;
+            clip-path: polygon(0 0, 5px 5px, 35px 25px, 3px 27px, 0 30px);
+          }
+        }
+      }
+    }
+    &_right {
+      order: 3;
+      padding-left: 70px;
+      & .body__note {
+        margin-right: auto;
+        &_designer::after {
+          content: '';
+          position: absolute;
+          background-color: $background-dark;
+          bottom: 90px;
+          right: 99.5%;
+          width: 35px;
+          height: 30px;
+          clip-path: polygon(35px 0, 35px 30px, 30px 25px, 0 5px, 32px 3px);
+        }
+        &_ceo {
+          margin-top: 190px;
+          &::after {
+            content: '';
+            position: absolute;
+            background-color: $background-dark;
+            bottom: 90px;
+            right: 99.5%;
+            width: 35px;
+            height: 30px;
+            clip-path: polygon(35px 0, 35px 30px, 30px 25px, 0 5px, 32px 3px);
+          }
+        }
+      }
+    }
+  }
+  &__note {
+    max-width: 470px;
+    width: 100%;
+    height: 147px;
+    padding: 15px 20px;
+    background-color: $background-dark;
+    border-radius: 7px;
+    position: relative;
+  }
+}
+
+.note {
+  &__wrapper {
+    max-width: 325px;
+    width: 100%;
+  }
+  &__position {
+    font-size: 22px;
+    line-height: 1.22;
+    display: inline-block;
+    color: $white;
+  }
+  &__place {
+    font-size: 20px;
+    line-height: 1;
+    color: $white;
+    opacity: 0.8;
+    margin-left: 25px;
+  }
+  &__period {
+    font-size: 17px;
+    line-height: 2.43;
+    font-weight: normal;
+    color: $red;
+    text-transform: uppercase;
+  }
+  &__text {
+    font-size: 16.5px;
+    line-height: 1.42;
+    font-weight: normal;
+    color: $white;
+    opacity: 0.8;
   }
 }

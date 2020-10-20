@@ -5,7 +5,7 @@ block main
     .page-wrapper
 
         //------------header-------------
-        header.header.shift
+        header.header.shift(id='home')
             .container
                 .header-inner
 
@@ -23,7 +23,7 @@ block main
                         a.header-hire(href="") Hire Me!
 
         //------------section about me-------------
-        section.about.shift
+        section.about.shift(id="about")
             .container
                 .about-inner
                     .about-left-block
@@ -50,6 +50,43 @@ block main
                         .foto
                             img(src="../img/its-me.png", alt="")
 
+        //------------section work experience-------------
+        section.experience
+            .container
+                .experience__inner
+                    h2.experience-title Work Experience
+                    .experience__body
+                        .body__tree
+                            img(src="../img/midlle.png", alt="")
+                        .body__item.body__item_left
+                            .body__note.body__note_creative
+                                .note__wrapper
+                                    h3.note__position Creative Director
+                                    span.note__place @deviserweb
+                                    .note__period jan 2013 - dec 2014
+                                    p.note__text Lorem ipsum dolor sit amet, consectetur et incididunt ut labore et dolorea.
+                            
+                            .body__note.body__note_manager
+                                .note__wrapper
+                                    h3.note__position Manager Director
+                                    span.note__place @Academy
+                                    .note__period jan 2013 - dec 2014
+                                    p.note__text Lorem ipsum dolor sit amet, consectetur et incididunt ut labore et dolorea.
+                        .body__item.body__item_right
+                            .body__note.body__note_designer
+                                .note__wrapper
+                                    h3.note__position UI/UX Designer
+                                    span.note__place @Academy
+                                    .note__period jan 2013 - dec 2014
+                                    p.note__text Lorem ipsum dolor sit amet, consectetur et incididunt ut labore et dolorea.
+
+                            .body__note.body__note_ceo
+                                .note__wrapper
+                                    h3.note__position Ceo & Founder
+                                    span.note__place @Starlab
+                                    .note__period jan 2013 - dec 2014
+                                    p.note__text Lorem ipsum dolor sit amet, consectetur et incididunt ut labore et dolorea.
+
     //------------menu elements-------------
     .menu-wrapper
         .container
@@ -68,9 +105,9 @@ block main
                 nav.menu-nav
                     ul
                         li
-                            a(href="#") Home
+                            a(href="#home") Home
                         li
-                            a(href="#") About me
+                            a(href="#about") About me
                         li
                             a(href="#") Education
                         li

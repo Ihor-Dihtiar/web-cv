@@ -6,3 +6,24 @@ $background-dark: #353541;
 $red: #fb6470;
 $border: #1d1d2b;
 $light-bg: #f9f9f9;
+$border-bottom: #e6e6e6;
+
+// ------------mixins-------------
+
+@mixin title {
+  &-title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.13;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 76px;
+      height: 2px;
+      background-color: $red;
+      bottom: -15px;
+      left: 0;
+    }
+  }
+}

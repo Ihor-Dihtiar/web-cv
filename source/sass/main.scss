@@ -72,6 +72,7 @@
 //------------section about me-------------
 
 .about {
+  background-color: $white;
   &-inner {
     padding-top: 74px;
     padding-left: 20px;
@@ -132,6 +133,7 @@
 //------------section work experience-------------
 
 .experience {
+  background-color: $white;
   &__inner {
     padding-top: 80px;
     padding-left: 20px;
@@ -140,129 +142,78 @@
     border-bottom: 2px solid $border-bottom;
   }
   @include title;
-  &__body {
+}
+
+//------------section education-------------
+
+.education {
+  background-color: $white;
+  &__inner {
+    padding-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 80px;
+  }
+  @include title;
+}
+
+//------------section my skills-------------
+
+.skills {
+  background-color: $white;
+  &__inner {
+    background-color: $background-black;
+    max-width: 1300px;
+    padding: 65px 85px 50px;
+    margin: 0 auto;
+  }
+  @include title;
+  &__title {
+    color: $white;
+  }
+  &__wrapper {
     margin-top: 50px;
+  }
+  &__elements {
     display: flex;
+    margin: 0px -35px;
+    padding: 0;
   }
 }
 
-.body {
-  &__tree {
-    order: 2;
-    flex-grow: 0;
-    flex-shrink: 0;
-    & img {
-      width: 100%;
-      height: 100%;
-    }
+.elements {
+  &__column {
+    flex-grow: 1;
+    padding: 0 35px;
   }
   &__item {
-    flex-grow: 1;
-    &_left {
-      padding-right: 70px;
-      order: 1;
-      & .body__note {
-        margin-left: auto;
-        &_creative {
-          margin-top: 96px;
-          &::after {
-            content: '';
-            position: absolute;
-            background-color: $background-dark;
-            top: 90px;
-            left: 99.5%;
-            width: 35px;
-            height: 30px;
-            clip-path: polygon(0 0, 5px 5px, 35px 25px, 3px 27px, 0 30px);
-          }
-        }
-        &_manager {
-          margin-top: 190px;
-          &::after {
-            content: '';
-            position: absolute;
-            background-color: $background-dark;
-            top: 90px;
-            left: 99.5%;
-            width: 35px;
-            height: 30px;
-            clip-path: polygon(0 0, 5px 5px, 35px 25px, 3px 27px, 0 30px);
-          }
-        }
-      }
-    }
-    &_right {
-      order: 3;
-      padding-left: 70px;
-      & .body__note {
-        margin-right: auto;
-        &_designer::after {
-          content: '';
-          position: absolute;
-          background-color: $background-dark;
-          bottom: 90px;
-          right: 99.5%;
-          width: 35px;
-          height: 30px;
-          clip-path: polygon(35px 0, 35px 30px, 30px 25px, 0 5px, 32px 3px);
-        }
-        &_ceo {
-          margin-top: 190px;
-          &::after {
-            content: '';
-            position: absolute;
-            background-color: $background-dark;
-            bottom: 90px;
-            right: 99.5%;
-            width: 35px;
-            height: 30px;
-            clip-path: polygon(35px 0, 35px 30px, 30px 25px, 0 5px, 32px 3px);
-          }
-        }
-      }
-    }
+    padding: 10px 0;
   }
-  &__note {
-    max-width: 470px;
-    width: 100%;
-    height: 147px;
-    padding: 15px 20px;
-    background-color: $background-dark;
-    border-radius: 7px;
-    position: relative;
-  }
-}
-
-.note {
-  &__wrapper {
-    max-width: 325px;
-    width: 100%;
-  }
-  &__position {
-    font-size: 22px;
+  &__name {
+    font-size: 18px;
+    font-weight: normal;
     line-height: 1.22;
-    display: inline-block;
-    color: $white;
-  }
-  &__place {
-    font-size: 20px;
-    line-height: 1;
     color: $white;
     opacity: 0.8;
-    margin-left: 25px;
   }
-  &__period {
-    font-size: 17px;
-    line-height: 2.43;
-    font-weight: normal;
-    color: $red;
-    text-transform: uppercase;
+  &__scale {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 4px;
   }
-  &__text {
-    font-size: 16.5px;
-    line-height: 1.42;
-    font-weight: normal;
+  &__line {
+    width: 100%;
+    height: 5px;
+    background-color: $white;
+    opacity: 0.8;
+    position: relative;
+  }
+  &__value {
+    font-size: 14px;
+    line-height: 1.2;
     color: $white;
+    margin-left: 20px;
     opacity: 0.8;
   }
 }

@@ -155,19 +155,19 @@ block main
                                 .elements__item
                                     .elements__name User Experience
                                     .elements__scale
-                                        .elements__line
+                                        .elements__line.elements__line_experience
                                         span.elements__value 90%
 
                                 .elements__item
                                     .elements__name User Interface
                                     .elements__scale
-                                        .elements__line
+                                        .elements__line.elements__line_ui
                                         span.elements__value 98%
 
                                 .elements__item
                                     .elements__name Web Design
                                     .elements__scale
-                                        .elements__line
+                                        .elements__line.elements__line_design-70
                                         span.elements__value 70%
                             
 
@@ -175,19 +175,19 @@ block main
                                 .elements__item
                                     .elements__name User Experience
                                     .elements__scale
-                                        .elements__line
+                                        .elements__line.elements__line_experience
                                         span.elements__value 90%
 
                                 .elements__item
                                     .elements__name User Interface
                                     .elements__scale
-                                        .elements__line
+                                        .elements__line.elements__line_ui-80
                                         span.elements__value 80%
 
                                 .elements__item
                                     .elements__name Web Design
                                     .elements__scale
-                                        .elements__line
+                                        .elements__line.elements__line_design-96
                                         span.elements__value 96%
 
 
@@ -195,22 +195,61 @@ block main
                                 .elements__item
                                     .elements__name Communication
                                     .elements__scale
-                                        .elements__line
+                                        .elements__line.elements__line_communication
                                         span.elements__value 90%
 
                                 .elements__item
                                     .elements__name Team Work
                                     .elements__scale
-                                        .elements__line
+                                        .elements__line.elements__line_team
                                         span.elements__value 80%
 
                                 .elements__item
                                     .elements__name Dedication
                                     .elements__scale
-                                        .elements__line
+                                        .elements__line.elements__line_dedication
                                         span.elements__value 96%
 
+        //------------section contacts-------------
+        section.contacts
+            .container
+                .contacts__inner
+                    .contacts__form-block
+                        .form-block__form
+                            .form__title Leave a Message
+                            form.form__body
+                                .form__all-inputs
+                                    .form__inputs-block
+                                        input(type="text" placeholder='Name*'  name='name' minlength='2' maxlength='20').form__input
+                                        input(type="email" placeholder='Email*'  name='email' maxlength='40').form__input
+                                        input(type="text" placeholder='Subject*'  name='subject' maxlength='30').form__input
+                                    textarea(placeholder='Message*'  name='message' maxlength='100').form__input.form__input_textarea
+                                input.form__button(type='submit' value='Hire me!')
 
+                    .contacts__contact-info
+                        .contact-info__body
+                            .contact-info__item
+                                .contact-info__icon
+                                    img(src="../img/home.svg", alt="")
+                                .contact-info__text-block
+                                    .contact-info__name Location
+                                    .contact-info__text Melitopol, Ukraine
+                            
+
+                            .contact-info__item
+                                .contact-info__icon
+                                    img(src="../img/mail.svg", alt="")
+                                .contact-info__text-block
+                                    .contact-info__name Email
+                                    .contact-info__text ihordihtiar@gmail.com
+                            
+
+                            .contact-info__item
+                                .contact-info__icon
+                                    img(src="../img/phone.svg", alt="")
+                                .contact-info__text-block
+                                    .contact-info__name Toll Free Call
+                                    .contact-info__text 0800 234 6578
 
 
     //------------menu elements-------------
@@ -235,9 +274,9 @@ block main
                         li
                             a(href="#about") About me
                         li
-                            a(href="#") Education
-                        li
                             a(href="#") Work Experience
+                        li
+                            a(href="#") Education
                         li
                             a(href="#") Skills
                         li

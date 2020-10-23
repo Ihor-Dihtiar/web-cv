@@ -16,7 +16,7 @@ input {
 }
 
 .container {
-  max-width: 1920px;
+  max-width: 1300px;
   width: 100%;
   margin: 0 auto;
   padding: 0 65px;
@@ -161,12 +161,12 @@ input {
 
 //------------shift for left margin-------------
 
-.shift {
-  transition: margin-left 0.4s;
-  &.open {
-    margin-left: 275px;
-  }
-}
+// .shift {
+//   transition: margin-left 0.4s;
+//   &.open {
+//     margin-left: 275px;
+//   }
+// }
 
 //------------achievements with tree image-------------
 

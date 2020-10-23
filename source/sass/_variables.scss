@@ -9,12 +9,12 @@ $scale-circle: #e85662;
 $border: #1d1d2b;
 $light-bg: #f9f9f9;
 $border-bottom: #e6e6e6;
-
 //color: rgba(62, 62, 62, 0.8)
 $contacts-text: #5d5d5d;
+$social-bg: #717171;
+$social-hover: #2ac2c8;
 
 // ------------mixins-------------
-
 @mixin title {
   &__title {
     font-size: 32px;

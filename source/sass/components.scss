@@ -20,6 +20,10 @@ input {
   width: 100%;
   margin: 0 auto;
   padding: 0 65px;
+  // ------------media query-------------
+  @include width(768) {
+    padding: 0 15px;
+  }
 }
 
 // ------------menu button burger-------------
@@ -154,8 +158,11 @@ input {
     line-height: 60px;
     border-bottom: 1px solid $border;
     background-color: $background-dark;
-    &:hover {
-      background-color: #5c5c6e;
+    // ------------media query-------------
+    @media screen and (min-width: 1280px) {
+      &:hover {
+        background-color: #5c5c6e;
+      }
     }
   }
 }

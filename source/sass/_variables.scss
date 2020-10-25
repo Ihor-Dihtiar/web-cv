@@ -46,6 +46,10 @@ $social-hover: #2ac2c8;
   }
 }
 
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
 // ------------adaptive font-------------
 @mixin adapt-fs($min-vw, $max-vw, $min-font-size, $max-font-size) {
   $u1: unit($min-vw);

@@ -12,18 +12,16 @@ block main
                     .header-background
                         img(src="../img/bg-img.png", alt="")
 
-                    
-                    
                     //------------title-------------
                     .header-main
                         h1.header-title Ihor Dihtiar
                         .header-subtitle
                             span #Web Developer
                             span #Systems Engineer
-                        a.header-hire(href="") Hire Me!
+                        a.header-hire(href="#contacts") Hire Me!
 
         //------------section about me-------------
-        section.about.shift(id="about")
+        section.about.shift(id='about')
             .container
                 .about-inner
                     .about-left-block
@@ -51,7 +49,7 @@ block main
                             img(src="../img/its-me.png", alt="")
 
         //------------section work experience-------------
-        section.experience
+        section.experience(id='experience')
             .container
                 .experience__inner
                     h2.experience__title Work Experience
@@ -63,41 +61,41 @@ block main
 
                         .body__item.body__item_left
                             .body__note.body__note_creative
-                                h3.note__position Creative Director
-                                span.note__place @deviserweb
+                                h3.note__position Systems Engineer
+                                span.note__place @Mediana
                                 .note__wrapper
                                    
-                                    .note__period jan 2013 - dec 2014
-                                    p.note__text Lorem ipsum dolor sit amet, consectetur et incididunt ut labore et dolorea.
+                                    .note__period sep 2011 - aug 2016
+                                    p.note__text Maintenance of computers, network and office equipment.
                             
                             .body__note.body__note_manager
-                                h3.note__position Manager Director
-                                span.note__place @Academy
+                                h3.note__position Systems Engineer
+                                span.note__place @Mediana
                                 .note__wrapper
                                     
-                                    .note__period jan 2013 - dec 2014
-                                    p.note__text Lorem ipsum dolor sit amet, consectetur et incididunt ut labore et dolorea.
+                                    .note__period sep 2011 - aug 2016
+                                    p.note__text Maintenance of computers, network and office equipment.
 
 
                         .body__item.body__item_right
                             .body__note.body__note_designer
-                                h3.note__position UI/UX Designer
-                                span.note__place @Academy
+                                h3.note__position Head of PC service
+                                span.note__place @Mediana
                                 .note__wrapper
                                     
-                                    .note__period jan 2013 - dec 2014
-                                    p.note__text Lorem ipsum dolor sit amet, consectetur et incididunt ut labore et dolorea.
+                                    .note__period sep 2016 - jul 2017
+                                    p.note__text Management and providing of the maintenance department.
 
                             .body__note.body__note_ceo
-                                h3.note__position Ceo & Founder
-                                span.note__place @Starlab
+                                h3.note__position Head of PC service
+                                span.note__place @Mediana
                                 .note__wrapper
                                     
-                                    .note__period jan 2013 - dec 2014
-                                    p.note__text Lorem ipsum dolor sit amet, consectetur et incididunt ut labore et dolorea.
+                                    .note__period sep 2016 - jul 2017
+                                    p.note__text Management and providing of the maintenance department.
 
         //------------section education-------------
-        section.education
+        section.education(id='education')
             .container
                 .education__inner
                     h2.education__title Education
@@ -145,7 +143,7 @@ block main
                                     p.note__text Lorem ipsum dolor sit amet, consectetur et incididunt ut labore et dolorea.
 
         //------------section my skills-------------
-        section.skills
+        section.skills(id='skills')
             .container
                 .skills__inner
                     h2.skills__title My Skills
@@ -211,7 +209,7 @@ block main
                                         span.elements__value 96%
 
         //------------section contacts-------------
-        section.contacts
+        section.contacts(id='contacts')
             .container
                 .contacts__inner
                     .contacts__form-block
@@ -299,10 +297,10 @@ block main
                         li
                             a(href="#about") About me
                         li
-                            a(href="#") Work Experience
+                            a(href="#experience") Work Experience
                         li
-                            a(href="#") Education
+                            a(href="#education") Education
                         li
-                            a(href="#") Skills
+                            a(href="#skills") Skills
                         li
-                            a(href="#") Contacts
+                            a(href="#contacts") Contacts

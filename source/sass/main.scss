@@ -9,19 +9,15 @@
   & .container {
     padding: 0;
   }
-  &-inner {
+  &__inner {
     height: 586px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow-x: hidden;
-    // ------------media query-------------
-    @include width(768) {
-      height: 400px;
-    }
   }
-  &-background {
+  &__background {
     position: absolute;
     top: 0;
     left: 0;
@@ -33,10 +29,10 @@
       object-fit: cover;
     }
   }
-  &-main {
+  &__main {
     position: relative;
   }
-  &-title {
+  &__title {
     width: 327px;
     height: 74px;
     font-size: 48px;
@@ -45,17 +41,8 @@
     color: $white;
     border-top: 2px solid $red;
     border-bottom: 2px solid $red;
-
-    // ------------media query-------------
-    @include width(768) {
-      width: 200px;
-      font-size: 30px;
-      margin: 0 auto;
-      height: 50px;
-      line-height: 50px;
-    }
   }
-  &-subtitle {
+  &__subtitle {
     margin: 5px 0 0 0;
     font-size: 17px;
     line-height: 2;
@@ -67,12 +54,8 @@
     & span:first-child {
       border-right: 2px solid $white;
     }
-    // ------------media query-------------
-    @include width(768) {
-      font-size: 10px;
-    }
   }
-  &-hire {
+  &__hire {
     display: block;
     width: 170px;
     height: 50px;
@@ -83,13 +66,6 @@
     line-height: 50px;
     border-radius: 5px;
     margin: 34px auto 0;
-    // ------------media query-------------
-    @include width(768) {
-      width: 120px;
-      height: 40px;
-      font-size: 18px;
-      line-height: 40px;
-    }
   }
 }
 
@@ -97,24 +73,18 @@
 
 .about {
   background-color: $white;
-  &-inner {
+  &__inner {
     padding-top: 74px;
     padding-bottom: 80px;
     border-bottom: 2px solid $border-bottom;
     display: flex;
-    /*------------media queries-------------*/
-    @include width(768) {
-      padding-top: 40px;
-      padding-bottom: 40px;
-      display: block;
-    }
   }
-  &-left-block {
+  &__left-block {
     display: flex;
     justify-content: center;
     flex-basis: 50%;
     & .info {
-      &-wrapper {
+      &__wrapper {
         max-width: 400px;
         width: 100%;
         padding-top: 100px;
@@ -128,52 +98,40 @@
         // ------------media query-------------
         @include adapt-fs(768px, 1024px, 26px, 32px);
       }
-      &-text {
+      &__text {
         margin-top: 50px;
         font-size: 16px;
         line-height: 1.6;
         opacity: 0.8;
         // ------------media query-------------
         @include adapt-fs(768px, 1024px, 14px, 16px);
-        @include width(768) {
-          margin-top: 30px;
-        }
       }
-      &-block {
+      &__block {
         margin-top: 20px;
         max-width: 340px;
         width: 100%;
         background-color: $light-bg;
-        // ------------media query-------------
-        @include width(768) {
-          margin-left: auto;
-          margin-right: auto;
-        }
-        &-item {
-          line-height: 50px;
-          padding-left: 10px;
-          font-size: 18px;
-          border-bottom: 1px solid $white;
+      }
+      &__block-item {
+        line-height: 50px;
+        padding-left: 10px;
+        font-size: 18px;
+        border-bottom: 1px solid $white;
 
-          // ------------media query-------------
-          @include adapt-fs(768px, 1024px, 16px, 18px);
-          & .key {
-            font-weight: 600;
-          }
+        // ------------media query-------------
+        @include adapt-fs(768px, 1024px, 16px, 18px);
+        & .key {
+          font-weight: 600;
         }
       }
     }
   }
 
-  &-right-block {
+  &__right-block {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-basis: 50%;
-    // ------------media query-------------
-    @include width(768) {
-      margin-top: 40px;
-    }
     & .foto {
       max-width: 380px;
       width: 100%;
@@ -183,10 +141,6 @@
       @include width(1024) {
         height: 415px;
         width: 300px;
-      }
-      @include width(768) {
-        margin-left: 0;
-        height: auto;
       }
 
       & img {
@@ -201,7 +155,6 @@
 //------------section work experience-------------
 
 .experience {
-  //   display: none;
   background-color: $white;
   &__inner {
     padding-top: 80px;
@@ -209,11 +162,6 @@
     padding-right: 20px;
     padding-bottom: 80px;
     border-bottom: 2px solid $border-bottom;
-    /*------------media query-------------*/
-    @include width(768) {
-      padding-top: 40px;
-      padding-bottom: 40px;
-    }
   }
   @include title;
 }
@@ -222,7 +170,7 @@
 
 .education {
   background-color: $white;
-  display: none;
+  // display: none;
   &__inner {
     padding-top: 80px;
     padding-left: 20px;
@@ -519,6 +467,72 @@
       height: 100%;
       fill: $social-bg;
       transition: fill 0.3s;
+    }
+  }
+}
+
+/*------------media query-------------*/
+
+@include width(768) {
+  .header {
+    &__inner {
+      height: 400px;
+    }
+    &__title {
+      width: 200px;
+      font-size: 30px;
+      margin: 0 auto;
+      height: 50px;
+      line-height: 50px;
+    }
+    &__subtitle {
+      font-size: 10px;
+    }
+    &__hire {
+      width: 120px;
+      height: 40px;
+      font-size: 18px;
+      line-height: 40px;
+    }
+  }
+
+  .about {
+    &__inner {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      display: block;
+    }
+    &__left-block {
+      & .info {
+        &__text {
+          margin-top: 30px;
+        }
+        &__block {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+    &__right-block {
+      margin-top: 40px;
+      & .foto {
+        margin-left: 0;
+        height: auto;
+      }
+    }
+  }
+
+  .experience {
+    &__inner {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
+  .education {
+    &__inner {
+      padding-top: 40px;
+      padding-bottom: 40px;
     }
   }
 }

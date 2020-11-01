@@ -19,11 +19,7 @@ input {
   max-width: 1300px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 65px;
-  // ------------media query-------------
-  @include width(768) {
-    padding: 0 15px;
-  }
+  padding: 0 30px;
 }
 
 // ------------menu button burger-------------
@@ -248,6 +244,12 @@ input {
     background-color: $background-dark;
     border-radius: 7px;
     position: relative;
+    font-size: 16.5px;
+    /*------------media query-------------*/
+    @include adapt-fs(768px, 1200px, 14px, 16.5px);
+    @include width(1200) {
+      height: auto;
+    }
   }
 }
 
@@ -257,27 +259,31 @@ input {
     width: 100%;
   }
   &__position {
-    font-size: 22px;
+    // font-size: 22px;
+    font-size: 1.33em;
     line-height: 1.22;
     display: inline-block;
     color: $white;
   }
   &__place {
-    font-size: 20px;
+    // font-size: 20px;
+    font-size: 1.21em;
     line-height: 1;
     color: $white;
     opacity: 0.8;
     margin-left: 25px;
   }
   &__period {
-    font-size: 17px;
+    // font-size: 17px;
+    font-size: 1.03em;
     line-height: 2.43;
     font-weight: normal;
     color: $red;
     text-transform: uppercase;
   }
   &__text {
-    font-size: 16.5px;
+    // font-size: 16.5px;
+    font-size: 1em;
     line-height: 1.42;
     font-weight: normal;
     color: $white;
@@ -287,8 +293,53 @@ input {
 
 //--------------------------------MEDIA QUERIES--------------------------------------------------------------------------------------------
 
-// @media (max-width: 1279px) {
-//   .container {
-//     padding: 0 30px;
-//   }
-// }
+@include width(768) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .achievement__body {
+    flex-wrap: wrap;
+  }
+
+  .body {
+    &__tree {
+      display: none;
+    }
+    &__item {
+      flex-basis: 100%;
+      &_left {
+        padding-right: 0;
+        order: 2;
+        & .body__note {
+          margin-right: auto;
+          &_creative {
+            margin-top: 40px;
+          }
+          &_manager {
+            display: none;
+          }
+          &::after {
+            display: none;
+          }
+        }
+      }
+      &_right {
+        order: 1;
+        padding-left: 0;
+        & .body__note {
+          margin-left: auto;
+          &_ceo {
+            display: none;
+          }
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+    &__note {
+      font-size: 16.5px;
+    }
+  }
+}

@@ -30,6 +30,10 @@ $social-hover: #2ac2c8;
       bottom: -15px;
       left: 0;
     }
+    /*------------media query-------------*/
+    @include width(768) {
+      font-size: 26px;
+    }
   }
 }
 

@@ -93,7 +93,7 @@
   }
 }
 
-//------------section about me-------------
+/*------------section about me-------------*/
 
 .about {
   background-color: $white;
@@ -102,7 +102,7 @@
     padding-bottom: 80px;
     border-bottom: 2px solid $border-bottom;
     display: flex;
-    // ------------media query-------------
+    /*------------media queries-------------*/
     @include width(768) {
       padding-top: 40px;
       padding-bottom: 40px;
@@ -209,6 +209,11 @@
     padding-right: 20px;
     padding-bottom: 80px;
     border-bottom: 2px solid $border-bottom;
+    /*------------media query-------------*/
+    @include width(768) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
   }
   @include title;
 }

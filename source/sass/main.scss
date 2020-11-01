@@ -170,7 +170,6 @@
 
 .education {
   background-color: $white;
-  // display: none;
   &__inner {
     padding-top: 80px;
     padding-left: 20px;
@@ -184,11 +183,9 @@
 
 .skills {
   background-color: $white;
-  display: none;
   &__inner {
     background-color: $background-black;
-    max-width: 1300px;
-    padding: 65px 85px 50px;
+    padding: 65px 30px 50px;
     margin: 0 auto;
   }
   @include title;
@@ -200,18 +197,21 @@
   }
   &__elements {
     display: flex;
-    margin: 0px -35px;
+    flex-wrap: wrap;
+    margin: 0px -30px;
     padding: 0;
   }
 }
 
 .elements {
-  &__column {
-    flex-grow: 1;
-    padding: 0 35px;
-  }
   &__item {
-    padding: 10px 0;
+    padding: 10px 30px;
+    flex-basis: 33.333%;
+    min-width: 300px;
+    /*------------media query-------------*/
+    @include width(992) {
+      flex-basis: 50%;
+    }
   }
   &__name {
     font-size: 18px;
@@ -471,7 +471,7 @@
   }
 }
 
-/*------------media query-------------*/
+/*------------media queries-------------*/
 
 @include width(768) {
   .header {
@@ -533,6 +533,20 @@
     &__inner {
       padding-top: 40px;
       padding-bottom: 40px;
+    }
+  }
+
+  .skills {
+    &__inner {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
+  .elements {
+    &__item {
+      flex-basis: 100%;
+      min-width: auto;
     }
   }
 }

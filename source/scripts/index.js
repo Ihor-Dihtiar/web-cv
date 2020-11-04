@@ -1,14 +1,18 @@
 import './contactForm.js';
+import './button-to-up.js';
 
 import '../sass/index.scss';
 
 window.onload = function () {
   const menuBtn = document.querySelector('.btn-burger');
-  const menuBtnIcon = document.querySelector('.burger-icon');
   const menu = document.querySelector('.side-menu');
+  const closeMenuBtn = document.querySelector('.menu-close');
 
   menuBtn.addEventListener('click', () => {
-    menuBtnIcon.classList.toggle('open');
-    menu.classList.toggle('open');
+    menu.classList.add('open');
+  });
+
+  closeMenuBtn.addEventListener('click', () => {
+    menu.classList.remove('open');
   });
 };

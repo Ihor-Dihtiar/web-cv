@@ -12,6 +12,11 @@ block main
                     .header__background
                         img(src="../img/bg-img.png", alt="")
 
+                    //------------menu burger button-------------
+                    button.btn-burger
+                        .burger-icon
+                            span
+
                     //------------title-------------
                     .header__main
                         h1.header__title Ihor Dihtiar
@@ -277,13 +282,10 @@ block main
     //------------menu elements-------------
     .menu-wrapper
         .container
-            //------------menu burger button-------------
-            button.btn-burger
-                .burger-icon
-                    span
-
             //------------side menu-------------
             .side-menu
+                button.menu-close
+                    .menu-close__cross
                 .menu-top
                     .menu-top-img
                         img(src="../img/its-me.png", alt="It's me")
@@ -303,3 +305,11 @@ block main
                             a(href="#skills") Skills
                         li
                             a(href="#contacts") Contacts
+    
+    //------------button to up-------------
+    <!------------button to up------------->
+    .arrow-up.hidden
+            svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="220.682px" height="220.682px" viewBox="0 0 220.682 220.682" style="enable-background:new 0 0 220.682 220.682;fill: white;width: 20px;height: 20px;" xml:space="preserve")
+                g
+                    polygon(points="110.341,0 10.639,99.703 38.924,127.986 110.341,56.568 181.758,127.986 210.043,99.703  ")
+                    polygon(points="110.341,92.695 10.639,192.396 38.924,220.682 110.341,149.264 181.758,220.682 210.043,192.396  ")

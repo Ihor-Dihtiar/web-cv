@@ -14,16 +14,17 @@ const babel = require('./webpack/babel');
 // const favicon = require('./webpack/favicon');
 const CleanWebpackPlugin = require('./webpack/cleanWebpackPlugin');
 
-
 const fs = require('fs');
 
 const PATHS = {
   source: path.join(__dirname, 'source'),
-  build: path.join(__dirname, 'build'),
+  docs: path.join(__dirname, 'docs'),
 };
 
 const PAGES_DIR = `${PATHS.source}/pages/`;
-const PAGES = fs.readdirSync(PAGES_DIR).filter((fileName) => fileName.endsWith('.pug'));
+const PAGES = fs
+  .readdirSync(PAGES_DIR)
+  .filter((fileName) => fileName.endsWith('.pug'));
 
 const common = merge([
   {
@@ -31,7 +32,7 @@ const common = merge([
       index: path.join(PATHS.source, 'scripts', 'index.js'),
     },
     output: {
-      path: PATHS.build,
+      path: PATHS.docs,
       filename: path.join('.', 'scripts', '[name].[contenthash].js'),
     },
     plugins: [
@@ -48,10 +49,6 @@ const common = merge([
             filename: `./${page.replace(/\.pug/, '.html')}`,
           })
       ),
-
-      
-
-      
     ],
     // optimization: {
     //   splitChunks: {
@@ -80,7 +77,7 @@ module.exports = function (env, argv) {
     // return merge([common, extractCSS(), favicon()]);
   }
   if (argv.mode === 'development') {
-    return merge([common, devserver(), extractCSS(),  sourceMap()]);
+    return merge([common, devserver(), extractCSS(), sourceMap()]);
     // return merge([common, devserver(), sass(), css(), favicon(), sourceMap()]);
   }
 };

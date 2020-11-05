@@ -80,6 +80,7 @@ input {
   opacity: 0;
   visibility: hidden;
   box-shadow: 0 0 11px 3px #484444;
+  overflow-y: auto;
   &.open {
     transform: translateX(0);
     opacity: 1;
